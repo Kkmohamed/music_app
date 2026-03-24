@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:music_app/core/resources/app_colors.dart';
 import 'package:music_app/core/resources/app_sizes.dart';
-import 'package:music_app/core/resources/app_strings.dart';
+import 'package:music_app/features/on_boarding/widgets/getstarted_button.dart';
+
 import 'package:music_app/features/on_boarding/widgets/onboarding_sub_title.dart';
 import 'package:music_app/features/on_boarding/widgets/onboarding_title.dart';
 
@@ -29,6 +30,8 @@ class OnboardingBody extends StatelessWidget {
             OnbardingTitle(),
             SizedBox(height: AppSizes.ph12),
             OnboardingSubTitle(),
+            SizedBox(height: AppSizes.ph58),
+            GetstartedButton(),
           ],
         ),
       ),
