@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_app/core/resources/app_assets.dart';
 
 import 'package:music_app/core/resources/app_colors.dart';
 import 'package:music_app/core/resources/app_sizes.dart';
@@ -32,6 +33,16 @@ class OnboardingBody extends StatelessWidget {
             OnboardingSubTitle(),
             SizedBox(height: AppSizes.ph58),
             GetstartedButton(),
+            Expanded(
+              child: SizedBox(
+                width: double.infinity,
+
+                child: Image.asset(
+                  AppAssets.onboardingPerson,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ],
         ),
       ),

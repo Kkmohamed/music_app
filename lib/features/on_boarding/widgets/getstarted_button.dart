@@ -14,7 +14,6 @@ class GetstartedButton extends StatelessWidget {
       child: Container(
         width: AppSizes.w170,
         height: AppSizes.h60,
-
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.kWhiteColor, width: 1),
           borderRadius: BorderRadius.circular(AppSizes.r50),
