@@ -4,6 +4,7 @@ import 'package:music_app/core/resources/app_assets.dart';
 import 'package:music_app/core/resources/app_colors.dart';
 import 'package:music_app/core/resources/app_sizes.dart';
 import 'package:music_app/features/on_boarding/widgets/getstarted_button.dart';
+import 'package:music_app/features/on_boarding/widgets/onbarding_person.dart';
 
 import 'package:music_app/features/on_boarding/widgets/onboarding_sub_title.dart';
 import 'package:music_app/features/on_boarding/widgets/onboarding_title.dart';
@@ -33,16 +34,7 @@ class OnboardingBody extends StatelessWidget {
             OnboardingSubTitle(),
             SizedBox(height: AppSizes.ph58),
             GetstartedButton(),
-            Expanded(
-              child: SizedBox(
-                width: double.infinity,
-
-                child: Image.asset(
-                  AppAssets.onboardingPerson,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
+            OnboardingPerson(),
           ],
         ),
       ),

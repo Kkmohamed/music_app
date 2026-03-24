@@ -13,7 +13,7 @@ class OnboardingSubTitle extends StatelessWidget {
       style: TextStyle(
         fontSize: AppSizes.sp16,
         color: AppColors.kWhiteColor,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
       ),
       textAlign: TextAlign.center,
     );
