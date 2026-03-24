@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/resources/app_assets.dart';
+
 import 'package:music_app/core/resources/app_colors.dart';
+import 'package:music_app/core/resources/app_sizes.dart';
+import 'package:music_app/core/resources/app_strings.dart';
+import 'package:music_app/features/on_boarding/widgets/onboarding_sub_title.dart';
+import 'package:music_app/features/on_boarding/widgets/onboarding_title.dart';
 
 class OnboardingBody extends StatelessWidget {
   const OnboardingBody({super.key});
@@ -17,14 +21,15 @@ class OnboardingBody extends StatelessWidget {
           colors: [AppColors.kPrimaryColor, AppColors.kSecondPrimaryColor],
         ),
       ),
-      child: Center(
-        child: Text(
-          'data',
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: AppAssets.orbitron,
-            fontSize: 30,
-          ),
+      child: Padding(
+        padding: EdgeInsets.only(top: AppSizes.ph112),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            OnbardingTitle(),
+            SizedBox(height: AppSizes.ph12),
+            OnboardingSubTitle(),
+          ],
         ),
       ),
     );

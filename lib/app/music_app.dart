@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:music_app/core/resources/app_assets.dart';
 import 'package:music_app/core/resources/route_manager.dart';
 
 class MusicApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class MusicApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutes.kSplashRoute,
         routes: RouteManager.routes,
+        theme: ThemeData(fontFamily: AppAssets.orbitron),
       ),
     );
   }
