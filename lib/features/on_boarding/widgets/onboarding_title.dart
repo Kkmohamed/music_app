@@ -8,14 +8,28 @@ class OnbardingTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      AppStrings.onboardingTitle,
-      style: TextStyle(
-        fontSize: AppSizes.sp50,
-        color: AppColors.kWhiteColor,
-        fontWeight: FontWeight.w700,
-      ),
-      textAlign: TextAlign.center,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          AppStrings.onboardingTitle1,
+          style: TextStyle(
+            fontSize: AppSizes.sp50,
+            color: AppColors.kWhiteColor,
+            fontWeight: FontWeight.w700,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        Text(
+          AppStrings.onboardingTitle2,
+          style: TextStyle(
+            fontSize: AppSizes.sp50,
+            color: AppColors.kLightBlue,
+            fontWeight: FontWeight.w700,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ],
     );
   }
 }
