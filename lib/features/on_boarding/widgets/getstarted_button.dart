@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:music_app/core/resources/app_colors.dart';
 import 'package:music_app/core/resources/app_sizes.dart';
 import 'package:music_app/core/resources/app_strings.dart';
+
+import 'package:music_app/features/home/screens/home_screen.dart';
 
 class GetstartedButton extends StatelessWidget {
   const GetstartedButton({super.key});
@@ -10,7 +11,7 @@ class GetstartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () => navigateToHome(context),
       child: Container(
         width: AppSizes.w170,
         height: AppSizes.h60,
@@ -32,6 +33,25 @@ class GetstartedButton extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
+      ),
+    );
+  }
+
+  void navigateToHome(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      PageRouteBuilder(
+        transitionDuration: const Duration(milliseconds: 400),
+        pageBuilder: (_, __, ___) => HomeScreen(),
+        transitionsBuilder: (_, animation, secondaryAnimation, child) {
+          return SlideTransition(
+            position: Tween(
+              begin: const Offset(1, 0),
+              end: Offset.zero,
+            ).chain(CurveTween(curve: Curves.easeOut)).animate(animation),
+            child: child,
+          );
+        },
       ),
     );
   }
